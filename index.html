@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distro Web | Jasa Pembuatan Website Bandung yang Kreatif dan Profesional</title>
+    <meta name="description" content="Distro Web adalah studio pembuatan website asal Bandung. Desain eksklusif, bukan template pasaran, untuk company profile, UMKM, toko online, dan komunitas. Konsultasi gratis.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Bricolage Grotesque for headers to give a slightly retro, impactful feel, and Plus Jakarta Sans for readable body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        petrol: '#17485A', // Petrol Dago
+                        tinta: '#0E2A35',  // Tinta
+                        orange: {
+                            DEFAULT: '#E8932F', // Oranye Distro
+                            dark: '#C97A1E',    // Oranye Bakar
+                        },
+                        cream: {
+                            DEFAULT: '#FBF2DE', // Krem Kertas
+                            dark: '#F1E4C8',    // Krem Tua
+                        },
+                        abu: '#5F6B70',     // Abu Kabut
+                        garis: '#E3D6B8',   // Garis Kertas
+                    },
+                    fontFamily: {
+                        display: ['"Bricolage Grotesque"', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'retro': '4px 4px 0px 0px rgba(14, 42, 53, 1)', // Tinta shadow
+                        'retro-hover': '2px 2px 0px 0px rgba(14, 42, 53, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for specific retro effects */
+        .bg-halftone {
+            background-image: radial-gradient(#E3D6B8 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+        
+        .text-outline {
+            -webkit-text-stroke: 1px #0E2A35;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-cream font-body text-tinta antialiased overflow-x-hidden selection:bg-orange selection:text-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-full border-2 border-tinta bg-cream-dark flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_0px_rgba(14,42,53,1)] transition-transform group-hover:-translate-y-0.5">
+                        <i class="ph-fill ph-tag text-petrol text-xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-2xl tracking-tight text-tinta uppercase">Distro Web</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#tentang" class="text-petrol hover:text-orange font-medium transition-colors">Tentang Kami</a>
+                    <a href="#layanan" class="text-petrol hover:text-orange font-medium transition-colors">Layanan</a>
+                    <a href="#cara-kerja" class="text-petrol hover:text-orange font-medium transition-colors">Cara Kerja</a>
+                    <a href="#kontak" class="bg-orange hover:bg-orange-dark text-white font-bold py-2.5 px-6 rounded-full border-2 border-tinta shadow-retro hover:shadow-retro-hover hover:translate-y-[2px] transition-all">
+                        Ngobrol Yuk
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-tinta focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-dark border-b-2 border-tinta absolute w-full left-0 top-20 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#tentang" class="block px-3 py-3 text-petrol font-medium border-b border-garis">Tentang Kami</a>
+                <a href="#layanan" class="block px-3 py-3 text-petrol font-medium border-b border-garis">Layanan</a>
+                <a href="#cara-kerja" class="block px-3 py-3 text-petrol font-medium border-b border-garis">Cara Kerja</a>
+                <a href="#kontak" class="block mt-4 px-3 py-3 text-center bg-orange text-white font-bold rounded-lg border-2 border-tinta shadow-retro">Ngobrol Yuk</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-halftone opacity-50 -z-10"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-cream-dark rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10"></div>
+        <div class="absolute top-1/2 -left-24 w-72 h-72 bg-orange/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Text Content -->
+                <div class="max-w-2xl">
+                    <div class="inline-block px-4 py-1.5 mb-6 rounded-full border-2 border-tinta bg-cream-dark text-petrol font-bold text-sm uppercase tracking-wider transform -rotate-2">
+                        <i class="ph-fill ph-push-pin mr-1 align-middle"></i> Dari Bandung untuk Web Anda
+                    </div>
+                    <h1 class="font-display font-extrabold text-5xl lg:text-6xl xl:text-7xl leading-[1.1] text-tinta mb-6">
+                        Website rasa Bandung, <span class="text-orange">kualitas tanpa kompromi.</span>
+                    </h1>
+                    <p class="text-lg lg:text-xl text-abu mb-10 leading-relaxed max-w-xl">
+                        Bukan template pasaran. Kami bikin website yang dirancang khusus untuk karakter bisnis Anda, supaya tampil beda dan dipercaya.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#kontak" class="inline-flex justify-center items-center gap-2 bg-orange hover:bg-orange-dark text-white font-bold py-4 px-8 rounded-full border-2 border-tinta shadow-retro hover:shadow-retro-hover hover:translate-y-[2px] transition-all text-lg">
+                            Konsultasi Gratis <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                        <a href="#layanan" class="inline-flex justify-center items-center gap-2 bg-transparent hover:bg-cream-dark text-petrol font-bold py-4 px-8 rounded-full border-2 border-petrol transition-all text-lg">
+                            Lihat Layanan Kami
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image/Graphic -->
+                <div class="relative lg:ml-auto">
+                    <div class="absolute inset-0 bg-petrol rounded-3xl translate-x-4 translate-y-4 border-2 border-tinta"></div>
+                    <img src="Gemini_Generated_Image_dkxbofdkxbofdkxb.jpg" alt="Logo Distro Web Bandung" class="relative rounded-3xl border-2 border-tinta w-full max-w-md mx-auto object-cover z-10 shadow-lg" onerror="this.src='https://placehold.co/600x600/17485A/FBF2DE?text=Distro+Web+Logo'">
+                    
+                    <!-- Decorative floating elements -->
+                    <div class="absolute -top-6 -left-6 bg-cream border-2 border-tinta rounded-full p-4 shadow-retro z-20 animate-bounce" style="animation-duration: 3s;">
+                        <i class="ph-duotone ph-code text-3xl text-orange"></i>
+                    </div>
+                    <div class="absolute -bottom-8 -right-4 bg-cream border-2 border-tinta p-3 shadow-retro z-20 transform rotate-12">
+                        <i class="ph-duotone ph-paint-brush-broad text-3xl text-petrol"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-petrol text-cream border-y-2 border-tinta relative overflow-hidden">
+        <!-- Decorative subtle background pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FBF2DE 2px, transparent 2px); background-size: 24px 24px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="font-display font-bold text-4xl lg:text-5xl mb-10 text-cream">Satu Brand, <span class="text-orange">Satu Karakter</span>, Satu Website.</h2>
+            <div class="space-y-6 text-lg lg:text-xl text-cream-dark leading-relaxed">
+                <p>
+                    Kalau bicara Bandung, pasti ingat distro, tempat lahirnya brand lokal yang berani tampil beda. Desainnya orisinal, dikerjakan teliti, dan setiap karya punya karakter.
+                </p>
+                <p>
+                    <strong class="text-orange font-display tracking-wide">Distro Web</strong> membawa semangat itu ke dunia digital. Kami bukan pabrik website yang mencetak ratusan situs dengan tampilan seragam. 
+                </p>
+                <p>
+                    Kami studio yang membuat website seperti distro membuat produk, dirancang khusus, dikerjakan dengan cermat, dan punya identitas yang tidak ditemukan di tempat lain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cream-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-display font-bold text-4xl lg:text-5xl text-tinta mb-4">Kenapa Memilih Kami?</h2>
+                <p class="text-abu text-lg">Bukan sekadar koding, kami meracik digital presence yang sesuai dengan gaya Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- USP 1 -->
+                <div class="bg-cream p-8 rounded-2xl border-2 border-tinta shadow-[4px_4px_0px_0px_#17485A] hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-orange/20 rounded-xl flex items-center justify-center mb-6 border border-orange">
+                        <i class="ph-duotone ph-fingerprint text-3xl text-orange"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-petrol mb-3">Desain Eksklusif</h3>
+                    <p class="text-abu leading-relaxed">Website Anda dirancang sesuai dengan gaya dan karakter bisnis, bukan sekadar pakai template pasaran. Tampilannya tidak akan sama dengan kompetitor Anda.</p>
+                </div>
+
+                <!-- USP 2 -->
+                <div class="bg-cream p-8 rounded-2xl border-2 border-tinta shadow-[4px_4px_0px_0px_#17485A] hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-petrol/10 rounded-xl flex items-center justify-center mb-6 border border-petrol">
+                        <i class="ph-duotone ph-lightning text-3xl text-petrol"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-petrol mb-3">Kreatif & Fungsional</h3>
+                    <p class="text-abu leading-relaxed">Tampilan menarik saja tidak cukup. Website buatan kami pastikan cepat diakses, mudah dinavigasi, nyaman dilihat dari HP, dan mudah ditemukan di Google.</p>
+                </div>
+
+                <!-- USP 3 -->
+                <div class="bg-cream p-8 rounded-2xl border-2 border-tinta shadow-[4px_4px_0px_0px_#17485A] hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-orange/20 rounded-xl flex items-center justify-center mb-6 border border-orange">
+                        <i class="ph-duotone ph-coffee text-3xl text-orange"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-petrol mb-3">Komunikasi Santai</h3>
+                    <p class="text-abu leading-relaxed">Kita ngobrol dengan bahasa sehari-hari, bukan bahasa teknis atau coding. Anda tidak perlu paham IT untuk bisa punya website yang keren.</p>
+                </div>
+
+                <!-- USP 4 -->
+                <div class="bg-cream p-8 rounded-2xl border-2 border-tinta shadow-[4px_4px_0px_0px_#17485A] hover:-translate-y-1 transition-transform md:col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 bg-petrol/10 rounded-xl flex items-center justify-center mb-6 border border-petrol">
+                        <i class="ph-duotone ph-users-three text-3xl text-petrol"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-petrol mb-3">Cocok Semua Kalangan</h3>
+                    <p class="text-abu leading-relaxed">Mulai dari brand anak muda yang ingin tampil hype sampai korporasi yang butuh kesan profesional dan terpercaya, gaya desainnya bisa kami sesuaikan.</p>
+                </div>
+
+                <!-- USP 5 -->
+                <div class="bg-cream p-8 rounded-2xl border-2 border-tinta shadow-[4px_4px_0px_0px_#17485A] hover:-translate-y-1 transition-transform md:col-span-2 lg:col-span-2">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                        <div class="w-16 h-16 shrink-0 bg-orange/20 rounded-xl flex items-center justify-center border border-orange">
+                            <i class="ph-duotone ph-wrench text-4xl text-orange"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-xl text-petrol mb-3">Pendampingan Jangka Panjang</h3>
+                            <p class="text-abu leading-relaxed max-w-2xl">Setelah selesai, website tidak kami lepas begitu saja. Tim kami siap membantu jika ada pembaruan konten, perbaikan, atau pengembangan fitur seiring bisnismu bertumbuh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="font-display font-bold text-4xl lg:text-5xl text-tinta mb-4">Etalase Layanan Kami</h2>
+                    <p class="text-abu text-lg">Beragam pilihan website untuk berbagai kebutuhan. Temukan yang paling pas untuk bisnismu.</p>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Decorative element -->
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 20C20 20 20 0 40 0C60 0 60 40 80 40C100 40 100 20 120 20" stroke="#17485A" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                <!-- Service 1 -->
+                <div class="group">
+                    <div class="border-b-2 border-garis pb-6 relative">
+                        <i class="ph-duotone ph-buildings text-5xl text-petrol mb-4 group-hover:-translate-y-2 transition-transform duration-300"></i>
+                        <h3 class="font-display font-bold text-2xl text-tinta mb-2 group-hover:text-orange transition-colors">Company Profile</h3>
+                        <p class="text-abu">Tampil lebih profesional dan meyakinkan di depan calon klien. Ciptakan kesan pertama yang tak terlupakan tentang perusahaanmu.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group">
+                    <div class="border-b-2 border-garis pb-6 relative">
+                        <i class="ph-duotone ph-storefront text-5xl text-petrol mb-4 group-hover:-translate-y-2 transition-transform duration-300"></i>
+                        <h3 class="font-display font-bold text-2xl text-tinta mb-2 group-hover:text-orange transition-colors">UMKM & Toko Online</h3>
+                        <p class="text-abu">Buat bisnismu siap jualan 24 jam. Etalase digital yang gampang dikelola dan sangat nyaman saat diakses pelanggan dari HP.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group">
+                    <div class="border-b-2 border-garis pb-6 relative">
+                        <i class="ph-duotone ph-rocket-launch text-5xl text-petrol mb-4 group-hover:-translate-y-2 transition-transform duration-300"></i>
+                        <h3 class="font-display font-bold text-2xl text-tinta mb-2 group-hover:text-orange transition-colors">Landing Page</h3>
+                        <p class="text-abu">Halaman khusus yang fokus pada satu tujuan. Sangat cocok untuk promosi, peluncuran produk baru, atau mengumpulkan prospek dari iklan.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group">
+                    <div class="border-b-2 border-garis pb-6 relative">
+                        <i class="ph-duotone ph-users-four text-5xl text-petrol mb-4 group-hover:-translate-y-2 transition-transform duration-300"></i>
+                        <h3 class="font-display font-bold text-2xl text-tinta mb-2 group-hover:text-orange transition-colors">Komunitas & Organisasi</h3>
+                        <p class="text-abu">Bangun pusat informasi yang rapi dan terpusat untuk menghubungkan seluruh anggota komunitas atau lembaga Anda.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group">
+                    <div class="border-b-2 border-garis pb-6 relative">
+                        <i class="ph-duotone ph-palette text-5xl text-petrol mb-4 group-hover:-translate-y-2 transition-transform duration-300"></i>
+                        <h3 class="font-display font-bold text-2xl text-tinta mb-2 group-hover:text-orange transition-colors">Portofolio Kreatif</h3>
+                        <p class="text-abu">Punya karya atau skill hebat? Tampilkan secara profesional supaya orang makin kagum dan tertarik bekerja sama.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 & 7 (Combined as extra services) -->
+                <div class="group bg-cream-dark p-6 rounded-xl border-2 border-tinta/20 border-dashed">
+                    <h3 class="font-display font-bold text-xl text-tinta mb-4">Layanan Tambahan</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check-circle text-orange mt-1"></i>
+                            <div>
+                                <span class="font-bold text-petrol block">Redesign Web Lama</span>
+                                <span class="text-abu text-sm">Ubah tampilan lawas jadi lebih segar dan modern.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check-circle text-orange mt-1"></i>
+                            <div>
+                                <span class="font-bold text-petrol block">Perawatan & Update</span>
+                                <span class="text-abu text-sm">Pastikan website selalu aman, sehat, dan up-to-date.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cara-kerja" class="py-24 bg-tinta text-cream border-t-4 border-orange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-bold text-4xl lg:text-5xl mb-4 text-cream">Proses Pembuatan</h2>
+                <p class="text-garis text-lg">Lima langkah sederhana menuju website impian Anda.</p>
+            </div>
+
+            <!-- Horizontal / Vertical Timeline -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Connecting line (Desktop) -->
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-1 bg-petrol"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-4 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-left group">
+                        <div class="w-24 h-24 rounded-full bg-petrol border-4 border-tinta flex items-center justify-center text-3xl font-display font-bold text-orange mb-6 shadow-[0_0_15px_rgba(232,147,47,0.3)] group-hover:scale-110 group-hover:bg-orange group-hover:text-tinta transition-all duration-300">
+                            1
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-cream mb-2">Ngobrol</h3>
+                        <p class="text-sm text-garis">Kita mulai dengan cerita santai tentang tujuan bisnismu dan siapa target pasar yang ingin dituju.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-left group">
+                        <div class="w-24 h-24 rounded-full bg-petrol border-4 border-tinta flex items-center justify-center text-3xl font-display font-bold text-orange mb-6 shadow-[0_0_15px_rgba(232,147,47,0.3)] group-hover:scale-110 group-hover:bg-orange group-hover:text-tinta transition-all duration-300">
+                            2
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-cream mb-2">Racik Konsep</h3>
+                        <p class="text-sm text-garis">Tim kami merancang konsep visual, struktur halaman, dan alur website supaya pas di hati.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-left group">
+                        <div class="w-24 h-24 rounded-full bg-petrol border-4 border-tinta flex items-center justify-center text-3xl font-display font-bold text-orange mb-6 shadow-[0_0_15px_rgba(232,147,47,0.3)] group-hover:scale-110 group-hover:bg-orange group-hover:text-tinta transition-all duration-300">
+                            3
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-cream mb-2">Mulai Membangun</h3>
+                        <p class="text-sm text-garis">Proses koding berjalan. Kami memastikan website berfungsi sempurna di laptop maupun HP.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-left group">
+                        <div class="w-24 h-24 rounded-full bg-petrol border-4 border-tinta flex items-center justify-center text-3xl font-display font-bold text-orange mb-6 shadow-[0_0_15px_rgba(232,147,47,0.3)] group-hover:scale-110 group-hover:bg-orange group-hover:text-tinta transition-all duration-300">
+                            4
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-cream mb-2">Siap Rilis</h3>
+                        <p class="text-sm text-garis">Website akhirnya tayang! Kami juga akan memandu cara mengelola isinya agar kamu bisa mandiri.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-left group">
+                        <div class="w-24 h-24 rounded-full bg-petrol border-4 border-tinta flex items-center justify-center text-3xl font-display font-bold text-orange mb-6 shadow-[0_0_15px_rgba(232,147,47,0.3)] group-hover:scale-110 group-hover:bg-orange group-hover:text-tinta transition-all duration-300">
+                            5
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-cream mb-2">Rawat Bersama</h3>
+                        <p class="text-sm text-garis">Kami tetap sedia mendampingi jika ada kendala atau butuh pengembangan lebih lanjut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-24 bg-orange relative overflow-hidden">
+        <!-- Retro pattern overlay -->
+        <div class="absolute inset-0 bg-halftone opacity-30 mix-blend-multiply"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-cream rounded-full mb-8 border-4 border-tinta shadow-retro transform -rotate-12">
+                <i class="ph-fill ph-rocket-launch text-4xl text-petrol"></i>
+            </div>
+            <h2 class="font-display font-extrabold text-5xl lg:text-6xl text-tinta mb-6">Siap Bawa Bisnismu<br>Naik Level?</h2>
+            <p class="text-xl text-tinta/80 font-medium mb-10 max-w-2xl mx-auto">
+                Mari kita diskusi santai. Ceritakan seperti apa website yang kamu butuhkan, dan kami akan bantu mewujudkannya jadi nyata.
+            </p>
+            
+            <!-- WhatsApp Link. Formatting message for URL -->
+            <a href="https://wa.me/6281234567890?text=Halo%20Distro%20Web,%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website..." target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-tinta hover:bg-petrol text-cream font-bold py-5 px-10 rounded-full border-2 border-tinta shadow-[6px_6px_0px_0px_#FBF2DE] hover:shadow-[3px_3px_0px_0px_#FBF2DE] hover:translate-y-[3px] hover:translate-x-[3px] transition-all text-xl w-full sm:w-auto">
+                <i class="ph-fill ph-whatsapp logo text-3xl text-[#25D366]"></i>
+                Hubungi via WhatsApp
+            </a>
+            <p class="mt-4 text-sm text-tinta/70 font-medium">*Gratis konsultasi, tidak harus langsung deal.</p>
+        </div>
+    </section>
+
+    <footer class="bg-cream-dark pt-16 pb-8 border-t-2 border-tinta relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <!-- Brand -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full border-2 border-tinta bg-cream flex items-center justify-center shadow-retro">
+                        <i class="ph-fill ph-tag text-petrol text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-2xl tracking-tight text-tinta uppercase block leading-none">Distro Web</span>
+                        <span class="text-sm font-bold text-orange tracking-widest uppercase">Bandung</span>
+                    </div>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-tinta bg-cream flex items-center justify-center text-petrol hover:bg-orange hover:text-white transition-colors shadow-[2px_2px_0px_0px_#0E2A35]">
+                        <i class="ph-fill ph-instagram-logo text-xl"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-tinta bg-cream flex items-center justify-center text-petrol hover:bg-orange hover:text-white transition-colors shadow-[2px_2px_0px_0px_#0E2A35]">
+                        <i class="ph-fill ph-twitter-logo text-xl"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border-2 border-tinta bg-cream flex items-center justify-center text-petrol hover:bg-orange hover:text-white transition-colors shadow-[2px_2px_0px_0px_#0E2A35]">
+                        <i class="ph-fill ph-dribbble-logo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-full h-px bg-garis mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-abu">
+                <p>
+                    <strong>Distro Web</strong> — Studio website asal Bandung. <br class="sm:hidden"> Desain khas, kualitas rapi, hasil berkarakter.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-petrol underline decoration-garis underline-offset-4">Syarat & Ketentuan</a>
+                    <span>&copy; <script>document.write(new Date().getFullYear())</script> Distro Web.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect (add shadow and bg on scroll)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-cream/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-garis');
+                navbar.classList.remove('bg-transparent', 'py-2');
+            } else {
+                navbar.classList.remove('bg-cream/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-garis');
+                navbar.classList.add('bg-transparent', 'py-2');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
